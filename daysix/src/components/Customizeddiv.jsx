@@ -67,7 +67,7 @@ const Customizeddiv = (props) => {
             <div>${data.price}.00</div>
           </div>
 
-          <div>Get with a discount of {data.id}%</div>
+          <div>Get with a discount of {data.discountPercentage}%</div>
 
           <div
             style={{

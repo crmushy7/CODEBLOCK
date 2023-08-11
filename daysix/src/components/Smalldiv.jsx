@@ -28,18 +28,17 @@ const Smalldiv = (props) => {
             style={{
               display: "flex",
               height: "100%",
-              width: "60%",
+              width: "80%",
               justifyContent: "center",
               alignItems: "center",
               backgroundColor: "#F5FFFA",
-              border: "1px solid black",
             }}
           >
             <img
               style={{
                 display: "flex",
                 height: "100%",
-                width: "60%",
+                width: "100%",
               }}
               src={data}
               alt=""

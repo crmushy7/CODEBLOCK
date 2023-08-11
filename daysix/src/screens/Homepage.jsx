@@ -2,7 +2,7 @@ import React from "react";
 import Cart from "../images/Cart.png";
 import Carttwo from "../images/Carttwo.png";
 import Personicon from "../images/Personicon.png";
-import Headphonegirl from "../images/Headphonegirl.jpeg";
+import Headph from "../images/Headph.png";
 import Customizeddiv from "../components/Customizeddiv";
 import { useEffect } from "react";
 import axios from "axios";
@@ -35,7 +35,7 @@ const Homepage = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          height: "5",
+          height: "5%",
           width: "88%",
           border: "1px solid black",
         }}
@@ -268,11 +268,27 @@ const Homepage = () => {
         <div
           style={{
             display: "flex",
-            width: "30%",
-            border: "1px solid black",
+            width: "40%",
+            height: "100%",
+            justifyContent: "center",
           }}
         >
-          {/* <img src={Headphonegirl} /> */}
+          <div
+            style={{
+              display: "flex",
+              height: "100%",
+              width: "100%",
+            }}
+          >
+            <img
+              style={{
+                display: "flex",
+                width: "100%",
+                maxWidth: "100%",
+              }}
+              src={Headph}
+            />
+          </div>
         </div>
       </div>
       <div

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Smalldiv from "../components/Smalldiv";
+import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 
 const Detailpage = () => {
   const { id } = useParams();
@@ -30,8 +31,7 @@ const Detailpage = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        border: "1px solid black",
+        height: "110vh",
         fontFamily: "sans-serif",
       }}
     >
@@ -42,7 +42,6 @@ const Detailpage = () => {
           justifyContent: "space-between",
           height: "80%",
           width: "80%",
-          border: "1px solid red",
           backgroundColor: "whitesmoke",
         }}
       >
@@ -53,9 +52,9 @@ const Detailpage = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            height: "5%",
+            height: "10%",
+            alignItems: "center",
             width: "100%",
-            border: "1px solid black",
           }}
         >
           <div
@@ -140,7 +139,6 @@ const Detailpage = () => {
             flexDirection: "row",
             height: "90%",
             width: "100%",
-            border: "1px solid black",
             justifyContent: "space-between",
           }}
         >
@@ -180,11 +178,10 @@ const Detailpage = () => {
                 gap: "20px",
                 height: "28%",
                 width: "100%",
-                border: "1px solid black",
               }}
             >
               {data?.images.map((images, index) => {
-                return <Smalldiv data={images} />;
+                return <Smalldiv key={index} data={images} />;
               })}
             </div>
           </div>
@@ -195,7 +192,6 @@ const Detailpage = () => {
               flexDirection: "column",
               height: "100%",
               width: "48%",
-              border: "1px solid black",
               justifyContent: "space-around",
             }}
           >
@@ -204,7 +200,6 @@ const Detailpage = () => {
                 display: "flex",
                 flexDirection: "column",
                 height: "19%",
-                border: "1px solid black",
                 justifyContent: "space-around",
               }}
             >
@@ -227,34 +222,59 @@ const Detailpage = () => {
               <div
                 style={{
                   display: "flex",
+                  flexDirection: "row",
                   height: "10%",
                 }}
-              ></div>
+              >
+                <div>
+                  <RiStarSFill />
+                </div>
+                <div>
+                  <RiStarSFill />
+                </div>
+                <div>
+                  <RiStarSFill />
+                </div>
+                <div>
+                  <RiStarSFill />
+                </div>
+                <div>
+                  <RiStarSLine />
+                </div>
+              </div>
             </div>
             <div
               style={{
                 display: "flex",
-                height: "19%",
-                border: "1px solid black",
+                height: "15%",
               }}
             >
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "space-evenly",
                   fontWeight: "bold",
                 }}
               >
                 <div>Price: ${data?.price}.00</div>
-                <div>Discount: ${data?.discountPercentage}</div>
+                <div
+                  style={{
+                    marginTop: "3%",
+                  }}
+                >
+                  Discount: ${data?.discountPercentage}
+                </div>
+                <div>
+                  <p>take advantage of our generous discounts!</p>
+                </div>
               </div>
             </div>
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                height: "19%",
-                border: "1px solid black",
+                height: "10%",
                 justifyContent: "space-around",
               }}
             >
@@ -262,11 +282,11 @@ const Detailpage = () => {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  height: "30%",
+                  height: "60%",
                   width: "40%",
-                  border: "1px solid black",
                   borderRadius: "20px",
                   justifyContent: "space-evenly",
+                  backgroundColor: "#F5FFFA",
                 }}
               >
                 <div
@@ -332,10 +352,9 @@ const Detailpage = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between",
-                height: "19%",
+                justifyContent: "space-evenly",
+                height: "12%",
                 width: "70%",
-                border: "1px solid black",
               }}
             >
               <div>
@@ -376,10 +395,29 @@ const Detailpage = () => {
             <div
               style={{
                 display: "flex",
-                height: "19%",
-                border: "1px solid black",
+                height: "34%",
               }}
-            ></div>
+            >
+              <div>
+                <h4
+                  style={{
+                    color: "#8E9949 ",
+                  }}
+                >
+                  FREE DELIVERY!
+                </h4>
+                <p>
+                  "Experience the convenience of free delivery with our
+                  exceptional services! We're delighted to bring our top-notch
+                  solutions right to your doorstep without any additional cost.
+                  Sit back, relax, and let us take care of the delivery, so you
+                  can enjoy our premium services hassle-free. Your satisfaction
+                  is our priority, and we're committed to making every step of
+                  your experience seamless and enjoyable. Discover the joy of
+                  free delivery today!"
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
